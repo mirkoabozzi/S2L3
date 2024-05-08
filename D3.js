@@ -105,7 +105,7 @@ const starWarsCharacters = [
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
 
-let charactersNames = [];
+const charactersNames = [];
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
@@ -195,14 +195,18 @@ console.log("Massa equipaggio", crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-const carico = 0;
-if (carico + crewMass <= 500) {
-  console.log("Ship is under loaded");
-}
-
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+
+for (let index = 0; index < starWarsCharacters.length; index++) {
+  const genderType = starWarsCharacters[index];
+  console.log(genderType);
+  if (genderType.gender === "n/a") {
+    genderType.gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.

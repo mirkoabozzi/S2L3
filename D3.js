@@ -176,12 +176,12 @@ console.log(eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 let crewMass = 0;
-let x = 0;
-while (x < starWarsCharacters.length) {
-  crewMass = crewMass + starWarsCharacters[x].mass;
-  x++;
+let index = 0;
+while (index < starWarsCharacters.length) {
+  crewMass = crewMass + starWarsCharacters[index].mass;
+  index++;
 }
-console.log(crewMass);
+console.log("Massa equipaggio", crewMass);
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -194,6 +194,11 @@ console.log(crewMass);
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+
+const carico = 0;
+if (carico + crewMass <= 500) {
+  console.log("Ship is under loaded");
+}
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)

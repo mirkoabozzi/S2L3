@@ -118,6 +118,16 @@ for (let index = 0; index < starWarsCharacters.length; index++) {
 }
 console.log(charactersNames);
 
+for (let index = 0; index < starWarsCharacters.length; index++) {
+  // sopra: cicla tutto l'array
+  const current = starWarsCharacters[index];
+  // sopra: genera una nuova costante curr contentente gli indici dell'array
+  console.log(current);
+  charactersNames.push(current.name);
+  // sopra: inserisce il nome della costante curr creata nel nuovo array charactersNames
+}
+console.log(charactersNames);
+
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
@@ -195,6 +205,19 @@ console.log("Massa equipaggio", crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+const astronave = 200;
+if (astronave + crewMass <= 500) {
+  console.log("Ship is under loaded");
+} else if (astronave + crewMass > 500 && astronave + crewMass < 700) {
+  console.log("Ship is half loaded");
+} else if (astronave + crewMass >= 700 && astronave + crewMass < 900) {
+  console.log("Warning: Load is over 700");
+} else if (astronave + crewMass >= 900 && astronave + crewMass < 1000) {
+  console.log("Critical Load: Over 900");
+} else if (astronave + crewMass > 1000) {
+  console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
+}
+
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
@@ -212,6 +235,7 @@ console.log(starWarsCharacters);
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+console.log(femaleCharacters);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
